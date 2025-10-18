@@ -62,12 +62,6 @@ python-dotenv
 - **Large PDFs**: if a file is huge, cap pages during ingest (e.g., `max_pages=300`) or split the PDF.
 - **Batch encoding**: for very large corpora, encode in batches to keep RAM low.
 
-## ✅ Demo prompts
-- *Who is the Defence Against the Dark Arts teacher in the first year?*
-- *What protections guard the Philosopher’s Stone?*
-- *What is the Chamber of Secrets and why is it feared?*
-- *Show passages where Dumbledore advises that choices matter more than abilities.*
-
 ## 🧹 .gitignore
 ```
 # keep private data out of the repo
