@@ -26,7 +26,7 @@ top_k = st.sidebar.slider("Results to show", 3, 10, 5)
 # --- Rebuild button & query box ---
 c1, c2 = st.columns([3, 1])
 with c1:
-    query = st.text_input("Ask a question (about your indexed documents)", placeholder="e.g., What protections guard the Philosopher’s Stone?")
+    query = st.text_input("Ask a question (about your indexed documents)")
 with c2:
     if st.button("Rebuild Index", use_container_width=True):
         st.session_state.idx = None
@@ -77,3 +77,4 @@ if query:
                 st.markdown(highlight_hits(texts[i], query), unsafe_allow_html=True)
 
         st.caption(f"Best similarity: {best:.3f}  •  Threshold: {min_conf:.2f}")
+
