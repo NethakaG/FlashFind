@@ -2,7 +2,6 @@ import re
 from collections import defaultdict
 
 def summarize_textrank(text, top_sentences=5):
-    # ultra-light TextRank-ish frequency summary
     words = re.findall(r"\w+", text.lower())
     freq = defaultdict(int)
     for w in words:
@@ -18,3 +17,4 @@ def summarize_textrank(text, top_sentences=5):
 def highlight_hits(sentence, query):
     q = re.escape(query)
     return re.sub(f"({q})", r"<mark>\1</mark>", sentence, flags=re.I)
+
